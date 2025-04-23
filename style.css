@@ -1,219 +1,121 @@
-/* Reset básico */
+/* Reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
   
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #121212, #2c3e50);
-    color: #f4f4f4;
-    line-height: 1.6;
-    min-height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom right, #f2e9f7, #e0c3fc);
+    color: #3c2a4d;
+    padding: 20px;
   }
   
-  /* Navbar */
-  .navbar {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #00ffe7;
-    text-decoration: none;
-  }
-  
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-menu li a {
-    color: #f4f4f4;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-    border-radius: 8px;
-  }
-  
-  .nav-menu li a.active,
-  .nav-menu li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Layout */
-  .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  
-  /* Header */
-  .calculator-header h1 {
+  header {
+    background-color: #7e57c2;
+    color: white;
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   
-  .calculator-header p {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    max-width: 720px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(60, 42, 77, 0.15);
+  }
+  
+  footer {
     text-align: center;
-    color: #ccc;
-    margin-bottom: 2rem;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #6c5b7b;
   }
   
-  /* Cards */
-  .card {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Form */
-  .calculator-form .form-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .form-column {
-    flex: 1;
-  }
-  
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  label {
+  form label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-top: 15px;
     font-weight: 600;
   }
   
-  input[type="number"],
-  select {
+  form input,
+  form select {
     width: 100%;
-    padding: 0.7rem;
+    padding: 10px;
+    margin-top: 5px;
     border-radius: 8px;
+    border: 1px solid #c7b2dd;
+    background-color: #f9f7fc;
+    color: #3c2a4d;
+  }
+  
+  form input:focus,
+  form select:focus {
+    outline: none;
+    border-color: #9c27b0;
+    box-shadow: 0 0 4px #ba68c8;
+  }
+  
+  form fieldset {
+    margin-top: 20px;
+    border: 1px solid #d1b3ec;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #faf5ff;
+  }
+  
+  form button {
+    margin-top: 25px;
+    background-color: #9c27b0;
+    color: white;
     border: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
   }
   
-  small {
-    display: block;
-    margin-top: 0.3rem;
-    color: #aaa;
-    font-size: 0.9rem;
+  form button:hover {
+    background-color: #7b1fa2;
   }
   
-  .input-icon {
-    display: flex;
-    align-items: center;
+  .results-section h2 {
+    color: #7b1fa2;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
   }
   
-  .input-icon .icon {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.7rem;
-    border-radius: 8px 0 0 8px;
+  .results-section p {
+    margin-bottom: 10px;
   }
   
-  .input-icon input {
-    border-radius: 0 8px 8px 0;
+  #cost-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e0c3fc;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #7b1fa2;
+    color: white;
+    padding: 10px 16px;
     border: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-  
-  /* Tabs */
-  .tabs {
-    margin-top: 1rem;
-  }
-  
-  .tab-header {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .tab {
-    padding: 0.5rem 1rem;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    color: #ccc;
-    transition: background 0.3s;
   }
   
-  .tab.active {
-    background: #00ffe7;
-    color: #000;
-    font-weight: bold;
-  }
-  
-  .tab-content .tab-pane {
-    display: none;
-  }
-  
-  .tab-content .tab-pane.active {
-    display: block;
-  }
-  
-  /* Buttons */
-  .btn-primary {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: #00ffe7;
-    color: #000;
-    border: none;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .btn-primary:hover {
-    background: #00d6c0;
-  }
-  
-  /* Resultados */
-  #results {
-    margin-top: 2rem;
-  }
-  
-  .metric {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
-  }
-  
-  .highlight {
-    color: #00ffe7;
-    font-weight: bold;
-  }
-  
-  .chart-container,
-  .interpretation-card {
-    margin-top: 1rem;
-  }
-  
-  /* Ocultamiento dinámico */
-  .hidden {
-    display: none;
+  button:hover {
+    background-color: #6a1b9a;
   }
   
